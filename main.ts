@@ -17,15 +17,11 @@ export default class AsdCounter extends Plugin {
 		});
 	}
 
-	onunload() {
-		this.statusBarElement.remove();
-	}
-
 	private async readActiveFileAndUpdateCount() {
 		const file = this.app.workspace.getActiveFile();
 		
 		if (file) {
-			const content = await this.app.vault.read(file);
+			const content = await this.app.vault.cachedRead(file);
 			this.updateCount(content);
 		} else {
 			this.updateCount("");

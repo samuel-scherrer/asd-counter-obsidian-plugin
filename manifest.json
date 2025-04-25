@@ -6,5 +6,5 @@
 	"description": "Counts 'asd' occurrences in the current file.",
 	"author": "Samuel Scherrer",
 	"authorUrl": "www.linkedin.com/in/samuelscherrer73",
-	"isDesktopOnly": false
+	"isDesktopOnly": true
 }
